@@ -14,14 +14,8 @@ It includes the functions of:
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
-import streamlit as st
-
-#Setting Streamlit page configuration
-st.set_page_config(layout='wide',
-                   initial_sidebar_state="expanded")
 
 #Function generates a dictionary of counts for each unqiue year or month
-@st.cache_data
 def generate_unique_list(df, option, date_column):
     """
     Generate a list of unique years or months from a Dataframe's date column.
@@ -48,7 +42,6 @@ def generate_unique_list(df, option, date_column):
         return unique_DMRs_years
 
 #Function that generates a dictionary of counts for each unique year or month
-@st.cache_data
 def generate_count_dict(df, option, date_column, unique_list):
     """
     Generates a dictionary of counts for each unique year or month.
@@ -92,7 +85,6 @@ def generate_count_dict(df, option, date_column, unique_list):
         return count_dict
 
 #Function that generates a bar chart of the top 8 suppliers by SQR percentages for a specific year 
-@st.cache_data
 def generate_SQR_bar_chart(df_SQR, year):
     """
     Generate a horizontal bar chart of the top 8 suppliers with the highest SQR %
