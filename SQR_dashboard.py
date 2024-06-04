@@ -357,6 +357,8 @@ if DMR_df is not None and supplier_PO_df is not None:
     df_vendor_SQR_ratios.rename(columns={'index':'Vendor'}, inplace = True)
 
     #START OF: Code for the dashboard continued
+    st.info("This is a sample of what the dashboard looks like. The official one requires users to upload\
+    the needed files.")
     st.title("Supplier Quality Ratios Dashboard")
     col = st.columns([1,1,1], gap='small')
     #creating row that contains the SQR percentages from the SQR calcualtions excel sheet
