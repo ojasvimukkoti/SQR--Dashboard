@@ -416,12 +416,13 @@ if DMR_df is not None and supplier_PO_df is not None:
                 mime='image/png'
             )
     #if an error while making the PBC chart occurs, an error message comes up
-    # except ValueError:
-    #     st.warning("Error occured while plotting. Please check files. *Select a different vendor or year.*")
-    except ValueError as e:
-        st.warning(f"ValueError: {str(e)} - Error occurred while plotting. Please check files. *Select a different vendor or year.*")
-    except Exception as e:
-        st.warning(f"Exception: {str(e)} - An unexpected error occurred. Please check the data and try again.")
+    except ValueError:
+        st.warning("Error occured while plotting. Please check files. *Select a different vendor or year.*")
+    
+    # except ValueError as e:
+    #     st.warning(f"ValueError: {str(e)} - Error occurred while plotting. Please check files. *Select a different vendor or year.*")
+    # except Exception as e:
+    #     st.warning(f"Exception: {str(e)} - An unexpected error occurred. Please check the data and try again.")
 
     colf = st.columns([1,1])
     #creating expanders for the raw DMR and PO data
