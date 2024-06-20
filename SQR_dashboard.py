@@ -376,7 +376,7 @@ if DMR_df is not None and supplier_PO_df is not None:
     col1 = st.columns([1,1])
 
     # Display the bar charts for each year
-    unique_years = sorted(set(PO_years).intersection(dmrs_years))
+    unique_years = sorted(set(PO_years).intersection(dmrs_years), reverse=True)
     n = 0
     for year in unique_years:
         with col1[n]:
